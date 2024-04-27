@@ -31,7 +31,7 @@ public class DeleteModel : PageModel
 
         Student = await _context.Students
             .AsNoTracking()
-            .FirstOrDefaultAsync(m => m.ID == id);
+            .FirstOrDefaultAsync(m => m.Id == id);
 
         if (Student == null)
         {

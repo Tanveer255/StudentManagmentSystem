@@ -27,7 +27,7 @@ public class DetailsModel : PageModel
             .Include(s => s.Enrollments)
             .ThenInclude(e => e.Course)
             .AsNoTracking()
-            .FirstOrDefaultAsync(m => m.ID == id);
+            .FirstOrDefaultAsync(m => m.Id == id);
 
         if (Student == null)
         {
