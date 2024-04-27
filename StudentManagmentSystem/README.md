@@ -1,5 +1,5 @@
-﻿# Implementing-Custom-Middleware-Components-in-ASP.NET-Core-Tanveer-255
-Welcome to our Warehouse Inventory Management System (WHMS), a cutting-edge solution meticulously designed to revolutionize your inventory operations. Powered by ASP.NET Core 8.0 Razor Pages (C#), WHMS offers a comprehensive suite of features including Sales, Purchase, Delivery, Goods Receive, Transfer, Adjustment, Return, Scrapping, Stock Count, Transaction Report, Movement Report
+﻿# Introduction
+Welcome to our Student Management System (SMS), a cutting-edge solution meticulously designed to revolutionize your inventory operations. Powered by ASP.NET Core 8.0 Razor Pages (C#), SMS offers a comprehensive suite of features including student, courses, instructor and departments
 
 # Technical Features
 - ASP.NET Core 6.0 Razor Pages (C#)
@@ -10,8 +10,7 @@ Welcome to our Warehouse Inventory Management System (WHMS), a cutting-edge solu
 - NumberSequence
 - LogAnalyticMiddleWare
 - CusTomMiddleWare implementation
-# CusTomMiddleWare implementation
-![StockMaster](wwwroot/Custommiddleware.png)
+
 # Functional Features
 - About 
 - Student 
