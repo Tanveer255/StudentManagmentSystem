@@ -1,5 +1,7 @@
 ﻿using StudentManagmentSystem.Data;
 using Microsoft.EntityFrameworkCore;
+using StudentManagmentSystem.MiddleWare;
+using StudentManagmentSystem.Infrastructure.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -9,6 +11,11 @@ builder.Services.AddDbContext<SchoolContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SchoolContext")));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddScoped<StudentManagmentSystem.Services.LogAnalyticService>();
+builder.Services.AddScoped<StudentManagmentSystem.Infrastructure.Repositories.IAuditColumnTransformer, AuditColumnTransformer>();
+
 
 var app = builder.Build();
 
@@ -38,6 +45,8 @@ using (var scope = app.Services.CreateScope())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+app.UseMiddleware<LogAnalyticMiddleware>();
 
 app.UseRouting();
 

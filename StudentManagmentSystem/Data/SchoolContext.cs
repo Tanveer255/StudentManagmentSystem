@@ -15,6 +15,7 @@ public class SchoolContext : DbContext
     public DbSet<Department> Departments { get; set; }
     public DbSet<Instructor> Instructors { get; set; }
     public DbSet<OfficeAssignment> OfficeAssignments { get; set; }
+    public DbSet<LogAnalytic> LogAnalytics { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
